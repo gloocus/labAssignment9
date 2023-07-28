@@ -131,7 +131,7 @@ int main(void)
 	
 	for(int i = 0; i < recordSz; i++){
 	    tmprec = pRecords;
-	    tmprec = tmprec + i // shifts the temp pointer for the pRecords array to the correct index for the iteration
+	    tmprec = tmprec + i; // shifts the temp pointer for the pRecords array to the correct index for the iteration
 	    hashidx = hash(tmprec -> id);// finds the hash index for a given id in the pRecords data
 	    tmphash = IDs;
 	    tmphash = tmphash + hashidx;// shifts the tmp pointer for the Hash Array to the hash index just calculated
