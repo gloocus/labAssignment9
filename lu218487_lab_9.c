@@ -25,7 +25,7 @@ struct tmpHash{
 // Compute the hash function
 int hash(int x)
 {
-    return x % 16;
+    return x % 18;
 }
 
 // parses input file to an integer array
@@ -121,11 +121,11 @@ int main(void)
 	
 	struct HashType *tmphash = NULL;
 	struct tmpHash *t = NULL;
-	struct HashType *IDs = malloc(sizeof(struct HashType) * 16); //creates a array of structs
+	struct HashType *IDs = malloc(sizeof(struct HashType) * 18); //creates a array of structs
 	struct RecordType *tmprec = NULL;
 	int hashidx;
 	
-	for(int i = 0; i < 16; i++){
+	for(int i = 0; i < 18; i++){
 	    IDs[i].item = NULL;// initialize all the item pointers in the array to NULL for future use
 	}
 	
@@ -148,7 +148,7 @@ int main(void)
 	        tmphash -> item = t;
 	    }
 	}
-	displayRecordsInHash(IDs, 16);
+	displayRecordsInHash(IDs, 18);
 	
 	
 	
